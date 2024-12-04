@@ -40,12 +40,12 @@ const SupportPage = () => {
         
         <hr />
 
-        {!submitted? (
+        {submitted? (
           <div className="thank-you-container">
             <label className="thank-you-message">
               Thank you for sending us your report, we will track the problem now.
             </label>
-            <label className="ticket-number">Your ticket number is: 126{ticketNo}</label>
+            <p className="ticket-number">Ticket number: <span>{ticketNo}</span></p>
           </div>
 
         ) : (

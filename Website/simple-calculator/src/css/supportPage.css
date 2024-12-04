@@ -10,6 +10,26 @@ body{
     color: white;
 }
 
+.thank-you-container{
+    padding-top: 100px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.thank-you-message{
+    font-size: 26px;
+    color: orange;
+}
+
+.ticket-number{
+    font-size: 20px;
+    color: #777;
+}
+
+.ticket-number span{
+    color: #fff;
+}
+
 .form-container{
     margin: 20px;
 }
@@ -42,7 +62,7 @@ body{
 }
 
 h1{
-    font-size: 32px;
+    font-size: 34px;
     margin-bottom: 10px;
 }
 
