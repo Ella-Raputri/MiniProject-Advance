@@ -12,7 +12,8 @@ const KeyButton: React.FC<ButtonProps> = ({ value, onClick }) => {
   const handleClick = () => {
     if (value === '?') {
       navigate('/supportpage');
-    } else if (onClick) {
+    } 
+    else if (onClick) {
       const valueClick = value === 'x' ? '*' : value;
       onClick(valueClick);
     }

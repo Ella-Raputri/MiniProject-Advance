@@ -21,23 +21,98 @@
 }
 
 .calculator-display {
+    position: relative;
     margin-bottom: 20px;
     font-size: 24px;
     padding: 10px;
     padding-bottom: 25px;
     width: 328px;
-    height: 130px;
+    height: 150px;
     margin: 0 auto;
     color: white;
     background-color: #585657;
     text-align: right;
 }
 
+.history-container {
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+    max-height: 100px;
+    z-index: 95;
+    display: inline-block;
+}
+
+.history-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #b3b3b3;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.history-btn:hover {
+    background-color: #d9d9d9;
+}
+
+.history-modal {
+    width: 150px;
+    max-height: 120px;
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    visibility: visible; 
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.history-header {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-btn:hover {
+    color: #555;
+}
+
+.history-entry-container {
+    max-height: 100px;
+    overflow-y: auto; 
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.history-entry {    
+    text-align: left;
+    color: #cacaca;
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .display-text{
-    margin-top: 80px;
+    margin-top: 85px;
     margin-right: 20px;
-    padding-bottom: 100px;
     font-size: 50px;
+    max-width: 310px;
+    overflow-x: auto;    
 }
 
 .btn-container{
@@ -51,7 +126,7 @@
     padding: 0 25px;
 }
 
-.calculator-button {
+.calculator-button, .long-calculator-button {
     padding: 15px;
     font-size: 20px;
     margin: 5px;
@@ -62,19 +137,12 @@
     cursor: pointer;
     border-radius: 30px;
     transition: background-color 0.2s, transform 0.2s;
+    z-index: 10;
 }
 
 .long-calculator-button {
-    padding: 15px;
-    font-size: 20px;
-    margin: 5px;
     width: 140px;
     height: 55px;
-    background-color: #b3b3b3;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: background-color 0.2s, transform 0.2s;
 }
 
 .calculator-button:hover {
@@ -116,6 +184,7 @@
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s;
+    z-index: 10;
 }
 
 .brown-calculator-button:hover {
@@ -126,4 +195,3 @@
     transform: scale(0.95);
     background-color: #a28365;
 }
-  

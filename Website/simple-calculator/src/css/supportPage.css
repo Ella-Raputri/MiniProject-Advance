@@ -61,6 +61,13 @@ body{
     font-size: 20px; 
 }
 
+.error-message {
+    color: rgb(255, 153, 153);
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+} 
+
 h1{
     font-size: 34px;
     margin-bottom: 10px;

@@ -11,18 +11,49 @@ const SupportPage = () => {
     description: '',
   });
 
+  const [errors, setErrors] = useState({
+    email: '',
+    username: '',
+  });
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const usernameRegex = /^[a-zA-Z0-9]{3,20}$/;
+
+  const validateField = (name: string, value: string) => {
+    let error = '';
+    if (name === 'email' && !emailRegex.test(value)) {
+      error = 'Invalid email format.';
+    } else if (name === 'username' && !usernameRegex.test(value)) {
+      error = 'Username must be 3-20 characters and alphanumeric only.';
+    }
+    setErrors((prev) => ({ ...prev, [name]: error }));
+  };
+
   const [submitted, setSubmitted] = useState(false);
   const [ticketNo, setTicketNo] = useState<number|null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
+    validateField(name, value);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', data);
+    const emailError = emailRegex.test(data.email) ? '' : 'Invalid email format.';
+    const username = data.firstName + data.lastName;
+    const usernameError = usernameRegex.test(username)
+      ? ''
+      : 'Username must be 3-20 characters and alphanumeric only.';
 
+    if (emailError || usernameError) {
+      alert(`Error: ${emailError + usernameError} Please try again.`)
+      setErrors({ email: emailError, username: usernameError });
+      return;
+    }
+
+    console.log('Form submitted:', data);
+    alert(`Form submitted successfully.`)
     const randomTicketNumber = Math.floor(Math.random() * 9000) + 1000;
     setTicketNo(randomTicketNumber);
     setSubmitted(true);
@@ -80,6 +111,7 @@ const SupportPage = () => {
                             <label htmlFor="lastName" className="small-label">Last</label>
                         </div>
                     </div>
+                    {errors.username && <span className="error-message">{errors.username}</span>}
                 </div>
 
                 <div className="input-wrapper">
@@ -93,6 +125,7 @@ const SupportPage = () => {
                         onChange={handleChange}
                         required
                     />
+                    {errors.email && <span className="error-message">{errors.email}</span>}
                 </div>
 
                 <div className="input-wrapper">
