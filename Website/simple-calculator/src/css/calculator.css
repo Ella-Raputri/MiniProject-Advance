@@ -107,12 +107,27 @@
     border-radius: 5px;
 }
 
+.prev-display {
+    color: #d2d2d2;
+    font-size: 18px;
+    text-align: right;
+    position: absolute;
+    width: calc(100% - 140px);
+    max-width: calc(100% - 140px);
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: nowrap;
+    top: 10px;
+    left: 120px;
+}
+
 .display-text{
     margin-top: 85px;
     margin-right: 20px;
     font-size: 50px;
     max-width: 310px;
     overflow-x: auto;    
+    text-align: right;
 }
 
 .btn-container{
@@ -145,11 +160,11 @@
     height: 55px;
 }
 
-.calculator-button:hover {
+.calculator-button:hover, .long-calculator-button:hover {
     background-color: #d9d9d9;
 }
 
-.calculator-button:active {
+.calculator-button:active, .long-calculator-button:active {
     transform: scale(0.95);
 }
 
@@ -194,4 +209,79 @@
 .brown-calculator-button:active {
     transform: scale(0.95);
     background-color: #a28365;
+}
+
+.convert-container {
+    position: absolute;
+    top: 15px; 
+    left: 140px;
+    max-height: 100px;
+    z-index: 990;
+    display: inline-block;
+}
+
+.info-modal {
+    width: 140px;
+    max-height: 120px;
+    background-color: #2b2b2b;
+    padding: 22px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    visibility: visible; 
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+  
+.modal-content {
+    font-size: 14px;
+    overflow-x: auto;
+    z-index: 991;  
+    border-radius: 5px;
+    text-align: left;
+    color: #cacaca;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+}
+  
+.close {
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close:hover {
+    color: #555;
+}
+
+.convert-btn {
+    position: absolute;
+    top: 55px;
+    left: 272px; 
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.material-symbols-outlined{
+    font-size: 24px;
+    color: #cacaca;
+    transition: color 0.3s;
+}
+  
+.material-symbols-outlined:hover{
+    color: #767676;
 }
