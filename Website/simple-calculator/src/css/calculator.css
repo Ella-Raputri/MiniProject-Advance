@@ -1,0 +1,129 @@
+.calc-container{
+    background-color: #8d8d8d;   
+}
+
+.calc-container h1{
+    text-align: center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.calculator-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    width: 350px;
+    background-color: #000;    
+}
+
+.calculator-display {
+    margin-bottom: 20px;
+    font-size: 24px;
+    padding: 10px;
+    padding-bottom: 25px;
+    width: 328px;
+    height: 130px;
+    margin: 0 auto;
+    color: white;
+    background-color: #585657;
+    text-align: right;
+}
+
+.display-text{
+    margin-top: 80px;
+    margin-right: 20px;
+    padding-bottom: 100px;
+    font-size: 50px;
+}
+
+.btn-container{
+    padding-top: 25px;
+}
+
+.button-row {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.calculator-button {
+    padding: 15px;
+    font-size: 20px;
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    background-color: #b3b3b3;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.long-calculator-button {
+    padding: 15px;
+    font-size: 20px;
+    margin: 5px;
+    width: 140px;
+    height: 55px;
+    background-color: #b3b3b3;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.calculator-button:hover {
+    background-color: #d9d9d9;
+}
+
+.calculator-button:active {
+    transform: scale(0.95);
+}
+
+.calculator-button:focus {
+    outline: none;
+}
+
+.button-row .calculator-button:last-child, .long-calculator-button:last-child{
+    background-color: orange; 
+    color: white; 
+    border: 1px solid orange; 
+}
+
+.button-row .calculator-button:last-child:hover, .long-calculator-button:last-child:hover {
+    background-color: #c78100; 
+}
+
+.button-row .calculator-button:last-child:active, .long-calculator-button:last-child:active {
+    transform: scale(0.95);
+    background-color: #c78100; 
+}
+
+.brown-calculator-button {
+    padding: 15px;
+    font-size: 20px;
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    background-color: #816347;
+    color: white;
+    border: 1px solid #a28365;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .brown-calculator-button:hover {
+    background-color: #a28365;
+  }
+  
+  .brown-calculator-button:active {
+    transform: scale(0.95);
+    background-color: #a28365;
+  }
+  
