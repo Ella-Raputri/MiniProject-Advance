@@ -3,6 +3,7 @@ import KeyButton from '../Components/KeyButton';
 import '../css/calculator.css';
 import { evaluate } from 'mathjs';
 import InfoModal from '../Components/InfoModal';
+import HistoryModal from '../Components/HistoryModal';
 
 const Calculator: React.FC = () => {
   // const [input, setInput] = useState<string>(''); 
@@ -85,19 +86,29 @@ const Calculator: React.FC = () => {
 
   const handleConvertClick = useCallback(() => {
     if (showHistory) setShowHistory(false);
-    var number = (operator === '')? firstNumber : secondNumber;
+    var number = (operator === '')? firstNumber : (secondNumber === '')? operator : secondNumber;
     if (number === '') number = '0'
 
-    if (!isNaN(Number(number)) && number !== '') {
+    if (!isNaN(Number(number)) && number !== '' && 
+      Number.isInteger(Number(number)) && 
+      !['+', '-', '*', '/'].includes(number)) {
       const num = parseInt(number, 10);
       setConvertedValues({
         binary: num.toString(2),
         hex: num.toString(16).toUpperCase(),
         octal: num.toString(8)
       });
-      setShowModal(true);
     }
-  }, [firstNumber, secondNumber, operator]);
+    else {
+      setConvertedValues({
+        binary: 'Invalid',
+        hex: 'Invalid',
+        octal: 'Invalid'
+      });      
+    }
+    setShowModal(true);
+
+  }, [firstNumber, secondNumber, operator, showHistory]);
   
 
   const buttonRows = [
@@ -145,21 +156,7 @@ const Calculator: React.FC = () => {
             <div className="calculator-display">
                 <button className="history-btn" onClick={toggleHistory}>History</button>
                 <div className="history-container">
-                  {showHistory && ( 
-                    <div className="history-modal">
-                      <div className="history-header">
-                        <span>History</span>
-                        <button className="close-btn" onClick={toggleHistory}>×</button>
-                      </div>
-                      <div className="history-entry-container">
-                        {history.map((entry, index) => (
-                          <div key={index} className="history-entry">
-                            {entry}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                  <HistoryModal show={showHistory} history={history} onClose={toggleHistory}></HistoryModal>
                 </div>
                 
                 <button className="convert-btn" onClick={handleConvertClick}>
