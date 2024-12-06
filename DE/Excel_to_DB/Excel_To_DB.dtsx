@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Excel_To_DB"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{3A913EF4-1253-432E-BA9A-024DCCEB98FB}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{4B9B8C9F-081C-415C-8B8D-57A526114CFC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,32 +25,32 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Asus\Documents\Programming\IT_DIV\Tugas2\DE\FilterDataset\fixed\netflix_titles.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Asus\Documents\Programming\IT_DIV\Tugas2\MiniProject-Advance\DE\FilterDataset\fixed\netflix_titles.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LAPTOP-T20MG0TI.ACT_SSIS_1]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{9F2E408C-2E11-48E3-8D7B-18A50390E5CE}"
+      DTS:DTSID="{729C9752-C4CD-4F68-9464-674A6024A183}"
       DTS:ObjectName="LAPTOP-T20MG0TI.ACT_SSIS_1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-T20MG0TI;Initial Catalog=ACT_SSIS_1;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Excel_To_DB-{9F2E408C-2E11-48E3-8D7B-18A50390E5CE}LAPTOP-T20MG0TI.ACT_SSIS_1;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=LAPTOP-T20MG0TI;Initial Catalog=ACT_SSIS_1;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Excel_To_DB-{729C9752-C4CD-4F68-9464-674A6024A183}LAPTOP-T20MG0TI.ACT_SSIS_1;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Insert netflix_titles"
+      DTS:refId="Package\Transfer netflix_titles Excel"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{76E2AA5E-435D-4867-B3C8-A94DDAA829D6}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Insert netflix_titles"
+      DTS:ObjectName="Transfer netflix_titles Excel"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -58,7 +58,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Insert netflix_titles\netflix_titles"
+              refId="Package\Transfer netflix_titles Excel\netflix_titles"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -99,7 +99,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert netflix_titles\netflix_titles.Connections[OleDbConnection]"
+                  refId="Package\Transfer netflix_titles Excel\netflix_titles.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
@@ -107,203 +107,203 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output]"
+                  refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[duration_minutes]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[duration_minutes]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[duration_minutes]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[duration_minutes]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[duration_minutes]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[duration_minutes]"
                       name="duration_minutes"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[duration_seasons]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[duration_seasons]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[duration_seasons]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[duration_seasons]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[duration_seasons]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[duration_seasons]"
                       name="duration_seasons"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[type]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[type]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[type]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[type]"
                       length="255"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[type]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[type]"
                       name="type"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[title]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[title]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[title]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[title]"
                       length="255"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[title]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[title]"
                       name="title"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[date_added]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[date_added]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[date_added]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[date_added]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[date_added]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[date_added]"
                       name="date_added"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[release_year]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[release_year]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[release_year]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[release_year]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[release_year]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[release_year]"
                       name="release_year"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[rating]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[rating]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[rating]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[rating]"
                       length="255"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[rating]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[rating]"
                       name="rating"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[description]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[description]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[description]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[description]"
                       length="255"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[description]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[description]"
                       name="description"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[show_id]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[show_id]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[show_id]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[show_id]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[show_id]"
                       name="show_id"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[duration_minutes]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[duration_minutes]"
                       dataType="r8"
                       name="duration_minutes" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[duration_seasons]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[duration_seasons]"
                       dataType="r8"
                       name="duration_seasons" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[type]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[type]"
                       dataType="wstr"
                       length="255"
                       name="type" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[title]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[title]"
                       dataType="wstr"
                       length="255"
                       name="title" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[date_added]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[date_added]"
                       dataType="date"
                       name="date_added" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[release_year]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[release_year]"
                       dataType="r8"
                       name="release_year" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[rating]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[rating]"
                       dataType="wstr"
                       length="255"
                       name="rating" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[description]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[description]"
                       dataType="wstr"
                       length="255"
                       name="description" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].ExternalColumns[show_id]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].ExternalColumns[show_id]"
                       dataType="r8"
                       name="show_id" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output]"
+                  refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[duration_minutes]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[duration_minutes]"
                       dataType="r8"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[duration_minutes]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[duration_minutes]"
                       name="duration_minutes" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[duration_seasons]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[duration_seasons]"
                       dataType="r8"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[duration_seasons]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[duration_seasons]"
                       name="duration_seasons" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[type]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[type]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[type]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[type]"
                       name="type" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[title]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[title]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[title]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[title]"
                       name="title" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[date_added]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[date_added]"
                       dataType="date"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[date_added]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[date_added]"
                       name="date_added" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[release_year]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[release_year]"
                       dataType="r8"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[release_year]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[release_year]"
                       name="release_year" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[rating]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[rating]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[rating]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[rating]"
                       name="rating" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[description]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[description]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[description]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[description]"
                       name="description" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[show_id]"
                       dataType="r8"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[show_id]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[show_id]"
                       name="show_id" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -312,7 +312,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Insert netflix_titles\OLE DB Destination"
+              refId="Package\Transfer netflix_titles Excel\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -327,7 +327,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[netflix_titles]</property>
+                  name="OpenRowset">[dbo].[NetflixTitles]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -369,7 +369,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert netflix_titles\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LAPTOP-T20MG0TI.ACT_SSIS_1]"
                   connectionManagerRefId="Package.ConnectionManagers[LAPTOP-T20MG0TI.ACT_SSIS_1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -377,136 +377,136 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[duration_minutes]"
-                      cachedDataType="r8"
-                      cachedName="duration_minutes"
-                      externalMetadataColumnId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[duration_minutes]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[duration_minutes]" />
-                    <inputColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[duration_seasons]"
-                      cachedDataType="r8"
-                      cachedName="duration_seasons"
-                      externalMetadataColumnId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[duration_seasons]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[duration_seasons]" />
-                    <inputColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[type]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[type]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="type"
-                      externalMetadataColumnId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[type]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[type]" />
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[type]" />
                     <inputColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[title]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[title]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="title"
-                      externalMetadataColumnId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[title]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[title]" />
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[title]" />
                     <inputColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[date_added]"
-                      cachedDataType="date"
-                      cachedName="date_added"
-                      externalMetadataColumnId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_added]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[date_added]" />
-                    <inputColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[release_year]"
-                      cachedDataType="r8"
-                      cachedName="release_year"
-                      externalMetadataColumnId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[release_year]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[release_year]" />
-                    <inputColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rating]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rating]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="rating"
-                      externalMetadataColumnId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rating]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[rating]" />
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rating]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[rating]" />
                     <inputColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[description]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[description]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="description"
-                      externalMetadataColumnId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[description]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[description]" />
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[description]" />
                     <inputColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[duration_minutes]"
+                      cachedDataType="r8"
+                      cachedName="duration_minutes"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DurationMinutes]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[duration_minutes]" />
+                    <inputColumn
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[duration_seasons]"
+                      cachedDataType="r8"
+                      cachedName="duration_seasons"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DurationSeasons]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[duration_seasons]" />
+                    <inputColumn
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[date_added]"
+                      cachedDataType="date"
+                      cachedName="date_added"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateAdded]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[date_added]" />
+                    <inputColumn
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[release_year]"
+                      cachedDataType="r8"
+                      cachedName="release_year"
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReleaseYear]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[release_year]" />
+                    <inputColumn
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[show_id]"
                       cachedDataType="r8"
                       cachedName="show_id"
-                      externalMetadataColumnId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[show_id]"
-                      lineageId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output].Columns[show_id]" />
+                      externalMetadataColumnId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShowId]"
+                      lineageId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output].Columns[show_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[duration_minutes]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DurationMinutes]"
                       dataType="i4"
-                      name="duration_minutes" />
+                      name="DurationMinutes" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[duration_seasons]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DurationSeasons]"
                       dataType="i4"
-                      name="duration_seasons" />
+                      name="DurationSeasons" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[type]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
                       dataType="wstr"
                       length="255"
-                      name="type" />
+                      name="Type" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[title]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
                       dataType="wstr"
                       length="255"
-                      name="title" />
+                      name="Title" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_added]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateAdded]"
                       dataType="wstr"
                       length="255"
-                      name="date_added" />
+                      name="DateAdded" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[release_year]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReleaseYear]"
                       dataType="i4"
-                      name="release_year" />
+                      name="ReleaseYear" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rating]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rating]"
                       dataType="wstr"
                       length="255"
-                      name="rating" />
+                      name="Rating" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[description]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
                       dataType="wstr"
                       length="2000"
-                      name="description" />
+                      name="Description" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[show_id]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShowId]"
                       dataType="wstr"
                       length="255"
-                      name="show_id" />
+                      name="ShowId" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Insert netflix_titles\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transfer netflix_titles Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transfer netflix_titles Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transfer netflix_titles Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -517,22 +517,22 @@
           </components>
           <paths>
             <path
-              refId="Package\Insert netflix_titles.Paths[Excel Source Output]"
-              endId="Package\Insert netflix_titles\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Transfer netflix_titles Excel.Paths[Excel Source Output]"
+              endId="Package\Transfer netflix_titles Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Insert netflix_titles\netflix_titles.Outputs[Excel Source Output]" />
+              startId="Package\Transfer netflix_titles Excel\netflix_titles.Outputs[Excel Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Insert netflix_titles_cast"
+      DTS:refId="Package\Transfer netflix_titles_cast Excel"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{7a69784f-4c40-4a15-a255-27e14da896c8}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Insert netflix_titles_cast"
+      DTS:ObjectName="Transfer netflix_titles_cast Excel"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -540,7 +540,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Insert netflix_titles_cast\netflix_titles_cast"
+              refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -581,7 +581,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert netflix_titles_cast\netflix_titles_cast.Connections[OleDbConnection]"
+                  refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
@@ -589,68 +589,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output]"
+                  refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output].Columns[show_id]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output].ExternalColumns[show_id]"
-                      lineageId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output].Columns[show_id]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output].ExternalColumns[show_id]"
+                      lineageId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output].Columns[show_id]"
                       name="show_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output].Columns[cast]"
+                      refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output].Columns[cast]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output].ExternalColumns[cast]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output].ExternalColumns[cast]"
                       length="255"
-                      lineageId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output].Columns[cast]"
+                      lineageId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output].Columns[cast]"
                       name="cast"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output].ExternalColumns[show_id]"
+                      refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output].ExternalColumns[show_id]"
                       dataType="r8"
                       name="show_id" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output].ExternalColumns[cast]"
+                      refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output].ExternalColumns[cast]"
                       dataType="wstr"
                       length="255"
                       name="cast" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Error Output]"
+                  refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[cast]"
+                      refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[cast]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[cast]"
+                      lineageId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[cast]"
                       name="cast" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[show_id]"
                       dataType="r8"
-                      lineageId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[show_id]"
+                      lineageId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[show_id]"
                       name="show_id" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -659,7 +659,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Insert netflix_titles_cast\OLE DB Destination"
+              refId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -674,7 +674,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[netflix_titles_cast]</property>
+                  name="OpenRowset">[dbo].[NetflixTitlesCast]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -716,7 +716,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert netflix_titles_cast\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LAPTOP-T20MG0TI.ACT_SSIS_1]"
                   connectionManagerRefId="Package.ConnectionManagers[LAPTOP-T20MG0TI.ACT_SSIS_1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -724,59 +724,59 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Insert netflix_titles_cast\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Insert netflix_titles_cast\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[show_id]"
-                      cachedDataType="r8"
-                      cachedName="show_id"
-                      externalMetadataColumnId="Package\Insert netflix_titles_cast\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[show_id]"
-                      lineageId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output].Columns[show_id]" />
-                    <inputColumn
-                      refId="Package\Insert netflix_titles_cast\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cast]"
+                      refId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cast]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="cast"
-                      externalMetadataColumnId="Package\Insert netflix_titles_cast\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cast]"
-                      lineageId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output].Columns[cast]" />
+                      externalMetadataColumnId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cast]"
+                      lineageId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output].Columns[cast]" />
+                    <inputColumn
+                      refId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[show_id]"
+                      cachedDataType="r8"
+                      cachedName="show_id"
+                      externalMetadataColumnId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShowId]"
+                      lineageId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output].Columns[show_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_cast\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[show_id]"
+                      refId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cast]"
                       dataType="wstr"
                       length="255"
-                      name="show_id" />
+                      name="Cast" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_cast\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cast]"
+                      refId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShowId]"
                       dataType="wstr"
                       length="255"
-                      name="cast" />
+                      name="ShowId" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Insert netflix_titles_cast\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Insert netflix_titles_cast\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_cast\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_cast\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_cast\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_cast\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -787,22 +787,22 @@
           </components>
           <paths>
             <path
-              refId="Package\Insert netflix_titles_cast.Paths[Excel Source Output]"
-              endId="Package\Insert netflix_titles_cast\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Transfer netflix_titles_cast Excel.Paths[Excel Source Output]"
+              endId="Package\Transfer netflix_titles_cast Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Insert netflix_titles_cast\netflix_titles_cast.Outputs[Excel Source Output]" />
+              startId="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast.Outputs[Excel Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Insert netflix_titles_category"
+      DTS:refId="Package\Transfer netflix_titles_category Excel"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{dc53f71e-6bd8-4b3d-ae07-f94ff1caea92}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Insert netflix_titles_category"
+      DTS:ObjectName="Transfer netflix_titles_category Excel"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -810,7 +810,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Insert netflix_titles_category\netflix_titles_category"
+              refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -851,7 +851,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert netflix_titles_category\netflix_titles_category.Connections[OleDbConnection]"
+                  refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
@@ -859,68 +859,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output]"
+                  refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output].Columns[show_id]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output].ExternalColumns[show_id]"
-                      lineageId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output].Columns[show_id]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output].ExternalColumns[show_id]"
+                      lineageId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output].Columns[show_id]"
                       name="show_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output].Columns[listed_in]"
+                      refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output].Columns[listed_in]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output].ExternalColumns[listed_in]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output].ExternalColumns[listed_in]"
                       length="255"
-                      lineageId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output].Columns[listed_in]"
+                      lineageId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output].Columns[listed_in]"
                       name="listed_in"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output].ExternalColumns[show_id]"
+                      refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output].ExternalColumns[show_id]"
                       dataType="r8"
                       name="show_id" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output].ExternalColumns[listed_in]"
+                      refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output].ExternalColumns[listed_in]"
                       dataType="wstr"
                       length="255"
                       name="listed_in" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Error Output]"
+                  refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Error Output].Columns[listed_in]"
+                      refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Error Output].Columns[listed_in]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Error Output].Columns[listed_in]"
+                      lineageId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Error Output].Columns[listed_in]"
                       name="listed_in" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Error Output].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Error Output].Columns[show_id]"
                       dataType="r8"
-                      lineageId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Error Output].Columns[show_id]"
+                      lineageId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Error Output].Columns[show_id]"
                       name="show_id" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -929,7 +929,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Insert netflix_titles_category\OLE DB Destination"
+              refId="Package\Transfer netflix_titles_category Excel\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -944,7 +944,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[netflix_titles_category]</property>
+                  name="OpenRowset">[dbo].[NetflixTitlesCategory]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -974,7 +974,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
@@ -986,7 +986,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert netflix_titles_category\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LAPTOP-T20MG0TI.ACT_SSIS_1]"
                   connectionManagerRefId="Package.ConnectionManagers[LAPTOP-T20MG0TI.ACT_SSIS_1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -994,59 +994,59 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Insert netflix_titles_category\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Insert netflix_titles_category\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[show_id]"
                       cachedDataType="r8"
                       cachedName="show_id"
-                      externalMetadataColumnId="Package\Insert netflix_titles_category\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[show_id]"
-                      lineageId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output].Columns[show_id]" />
+                      externalMetadataColumnId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShowId]"
+                      lineageId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output].Columns[show_id]" />
                     <inputColumn
-                      refId="Package\Insert netflix_titles_category\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[listed_in]"
+                      refId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[listed_in]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="listed_in"
-                      externalMetadataColumnId="Package\Insert netflix_titles_category\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[listed_in]"
-                      lineageId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output].Columns[listed_in]" />
+                      externalMetadataColumnId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ListedIn]"
+                      lineageId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output].Columns[listed_in]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_category\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[show_id]"
+                      refId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ListedIn]"
                       dataType="wstr"
                       length="255"
-                      name="show_id" />
+                      name="ListedIn" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_category\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[listed_in]"
+                      refId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShowId]"
                       dataType="wstr"
                       length="255"
-                      name="listed_in" />
+                      name="ShowId" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Insert netflix_titles_category\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Insert netflix_titles_category\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_category\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_category\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_category\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_category\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1057,22 +1057,22 @@
           </components>
           <paths>
             <path
-              refId="Package\Insert netflix_titles_category.Paths[Excel Source Output]"
-              endId="Package\Insert netflix_titles_category\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Transfer netflix_titles_category Excel.Paths[Excel Source Output]"
+              endId="Package\Transfer netflix_titles_category Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Insert netflix_titles_category\netflix_titles_category.Outputs[Excel Source Output]" />
+              startId="Package\Transfer netflix_titles_category Excel\netflix_titles_category.Outputs[Excel Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Insert netflix_titles_countries"
+      DTS:refId="Package\Transfer netflix_titles_countries Excel"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{4e7138ae-386e-4a31-b281-7dc2ee15bb3e}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Insert netflix_titles_countries"
+      DTS:ObjectName="Transfer netflix_titles_countries Excel"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -1080,7 +1080,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Insert netflix_titles_countries\netflix_titles_countries"
+              refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -1121,7 +1121,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert netflix_titles_countries\netflix_titles_countries.Connections[OleDbConnection]"
+                  refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1129,68 +1129,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output]"
+                  refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output].Columns[show_id]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output].ExternalColumns[show_id]"
-                      lineageId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output].Columns[show_id]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output].ExternalColumns[show_id]"
+                      lineageId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output].Columns[show_id]"
                       name="show_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output].Columns[country]"
+                      refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output].Columns[country]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output].ExternalColumns[country]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output].ExternalColumns[country]"
                       length="255"
-                      lineageId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output].Columns[country]"
+                      lineageId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output].Columns[country]"
                       name="country"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output].ExternalColumns[show_id]"
+                      refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output].ExternalColumns[show_id]"
                       dataType="r8"
                       name="show_id" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output].ExternalColumns[country]"
+                      refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output].ExternalColumns[country]"
                       dataType="wstr"
                       length="255"
                       name="country" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Error Output]"
+                  refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[country]"
+                      refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[country]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[country]"
+                      lineageId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[country]"
                       name="country" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[show_id]"
                       dataType="r8"
-                      lineageId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[show_id]"
+                      lineageId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[show_id]"
                       name="show_id" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1199,7 +1199,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Insert netflix_titles_countries\OLE DB Destination"
+              refId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -1214,7 +1214,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[netflix_titles_countries]</property>
+                  name="OpenRowset">[dbo].[NetflixTitlesCountries]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1244,7 +1244,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
@@ -1256,7 +1256,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert netflix_titles_countries\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LAPTOP-T20MG0TI.ACT_SSIS_1]"
                   connectionManagerRefId="Package.ConnectionManagers[LAPTOP-T20MG0TI.ACT_SSIS_1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1264,59 +1264,59 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Insert netflix_titles_countries\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Insert netflix_titles_countries\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[show_id]"
-                      cachedDataType="r8"
-                      cachedName="show_id"
-                      externalMetadataColumnId="Package\Insert netflix_titles_countries\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[show_id]"
-                      lineageId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output].Columns[show_id]" />
-                    <inputColumn
-                      refId="Package\Insert netflix_titles_countries\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[country]"
+                      refId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[country]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="country"
-                      externalMetadataColumnId="Package\Insert netflix_titles_countries\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
-                      lineageId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output].Columns[country]" />
+                      externalMetadataColumnId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output].Columns[country]" />
+                    <inputColumn
+                      refId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[show_id]"
+                      cachedDataType="r8"
+                      cachedName="show_id"
+                      externalMetadataColumnId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShowId]"
+                      lineageId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output].Columns[show_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_countries\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[show_id]"
+                      refId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
                       dataType="wstr"
                       length="255"
-                      name="show_id" />
+                      name="Country" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_countries\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      refId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShowId]"
                       dataType="wstr"
                       length="255"
-                      name="country" />
+                      name="ShowId" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Insert netflix_titles_countries\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Insert netflix_titles_countries\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_countries\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_countries\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_countries\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_countries\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1327,22 +1327,22 @@
           </components>
           <paths>
             <path
-              refId="Package\Insert netflix_titles_countries.Paths[Excel Source Output]"
-              endId="Package\Insert netflix_titles_countries\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Transfer netflix_titles_countries Excel.Paths[Excel Source Output]"
+              endId="Package\Transfer netflix_titles_countries Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Insert netflix_titles_countries\netflix_titles_countries.Outputs[Excel Source Output]" />
+              startId="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries.Outputs[Excel Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Insert netflix_titles_directors"
+      DTS:refId="Package\Transfer netflix_titles_directors Excel"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{9a8647ec-6089-4feb-93a5-aefbb9614051}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Insert netflix_titles_directors"
+      DTS:ObjectName="Transfer netflix_titles_directors Excel"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -1350,7 +1350,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors"
+              refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -1391,7 +1391,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Connections[OleDbConnection]"
+                  refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1399,68 +1399,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output]"
+                  refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[show_id]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output].ExternalColumns[show_id]"
-                      lineageId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[show_id]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output].ExternalColumns[show_id]"
+                      lineageId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[show_id]"
                       name="show_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[director]"
+                      refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[director]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output].ExternalColumns[director]"
+                      externalMetadataColumnId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output].ExternalColumns[director]"
                       length="255"
-                      lineageId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[director]"
+                      lineageId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[director]"
                       name="director"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output].ExternalColumns[show_id]"
+                      refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output].ExternalColumns[show_id]"
                       dataType="r8"
                       name="show_id" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output].ExternalColumns[director]"
+                      refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output].ExternalColumns[director]"
                       dataType="wstr"
                       length="255"
                       name="director" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Error Output]"
+                  refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[director]"
+                      refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[director]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[director]"
+                      lineageId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[director]"
                       name="director" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[show_id]"
+                      refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[show_id]"
                       dataType="r8"
-                      lineageId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[show_id]"
+                      lineageId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[show_id]"
                       name="show_id" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1469,7 +1469,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Insert netflix_titles_directors\OLE DB Destination"
+              refId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -1484,7 +1484,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[netflix_titles_directors]</property>
+                  name="OpenRowset">[dbo].[NetflixTitlesDirectors]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1514,7 +1514,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
@@ -1526,7 +1526,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Insert netflix_titles_directors\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LAPTOP-T20MG0TI.ACT_SSIS_1]"
                   connectionManagerRefId="Package.ConnectionManagers[LAPTOP-T20MG0TI.ACT_SSIS_1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1534,59 +1534,59 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Insert netflix_titles_directors\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Insert netflix_titles_directors\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[show_id]"
-                      cachedDataType="r8"
-                      cachedName="show_id"
-                      externalMetadataColumnId="Package\Insert netflix_titles_directors\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[show_id]"
-                      lineageId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[show_id]" />
-                    <inputColumn
-                      refId="Package\Insert netflix_titles_directors\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[director]"
+                      refId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[director]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="director"
-                      externalMetadataColumnId="Package\Insert netflix_titles_directors\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[director]"
-                      lineageId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[director]" />
+                      externalMetadataColumnId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Director]"
+                      lineageId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[director]" />
+                    <inputColumn
+                      refId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[show_id]"
+                      cachedDataType="r8"
+                      cachedName="show_id"
+                      externalMetadataColumnId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShowId]"
+                      lineageId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output].Columns[show_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_directors\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[show_id]"
+                      refId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Director]"
                       dataType="wstr"
                       length="255"
-                      name="show_id" />
+                      name="Director" />
                     <externalMetadataColumn
-                      refId="Package\Insert netflix_titles_directors\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[director]"
+                      refId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShowId]"
                       dataType="wstr"
                       length="255"
-                      name="director" />
+                      name="ShowId" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Insert netflix_titles_directors\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Insert netflix_titles_directors\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insert netflix_titles_directors\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_directors\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Insert netflix_titles_directors\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Insert netflix_titles_directors\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1597,10 +1597,10 @@
           </components>
           <paths>
             <path
-              refId="Package\Insert netflix_titles_directors.Paths[Excel Source Output]"
-              endId="Package\Insert netflix_titles_directors\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Transfer netflix_titles_directors Excel.Paths[Excel Source Output]"
+              endId="Package\Transfer netflix_titles_directors Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Insert netflix_titles_directors\netflix_titles_direcetors.Outputs[Excel Source Output]" />
+              startId="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors.Outputs[Excel Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1618,8 +1618,8 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9F2E408C-2E11-48E3-8D7B-18A50390E5CE}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE netflix_titles" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{729C9752-C4CD-4F68-9464-674A6024A183}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE NetflixTitles" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1635,8 +1635,8 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9F2E408C-2E11-48E3-8D7B-18A50390E5CE}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE netflix_titles_cast" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{729C9752-C4CD-4F68-9464-674A6024A183}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE NetflixTitlesCast" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1652,8 +1652,8 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9F2E408C-2E11-48E3-8D7B-18A50390E5CE}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE netflix_titles_category" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{729C9752-C4CD-4F68-9464-674A6024A183}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE NetflixTitlesCategory" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1669,8 +1669,8 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9F2E408C-2E11-48E3-8D7B-18A50390E5CE}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE netflix_titles_countries" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{729C9752-C4CD-4F68-9464-674A6024A183}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE NetflixTitlesCountries" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1686,8 +1686,8 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9F2E408C-2E11-48E3-8D7B-18A50390E5CE}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE netflix_titles_directors" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{729C9752-C4CD-4F68-9464-674A6024A183}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE NetflixTitlesDirectors" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1699,12 +1699,12 @@
       DTS:From="Package\Truncate netflix_titles"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Insert netflix_titles" />
+      DTS:To="Package\Transfer netflix_titles Excel" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
       DTS:DTSID="{E36D2AEE-6260-43B1-9091-68BE30CCE0A0}"
-      DTS:From="Package\Insert netflix_titles"
+      DTS:From="Package\Transfer netflix_titles Excel"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Truncate netflix_titles_directors" />
@@ -1715,12 +1715,12 @@
       DTS:From="Package\Truncate netflix_titles_directors"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Insert netflix_titles_directors" />
+      DTS:To="Package\Transfer netflix_titles_directors Excel" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
       DTS:DTSID="{0A3DEAB8-243E-455F-852A-ADA9A53B792D}"
-      DTS:From="Package\Insert netflix_titles_directors"
+      DTS:From="Package\Transfer netflix_titles_directors Excel"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Truncate netflix_titles_countries" />
@@ -1731,12 +1731,12 @@
       DTS:From="Package\Truncate netflix_titles_countries"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
-      DTS:To="Package\Insert netflix_titles_countries" />
+      DTS:To="Package\Transfer netflix_titles_countries Excel" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
       DTS:CreationName=""
       DTS:DTSID="{5E97B342-F625-4992-9526-5316461F394E}"
-      DTS:From="Package\Insert netflix_titles_countries"
+      DTS:From="Package\Transfer netflix_titles_countries Excel"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
       DTS:To="Package\Truncate netflix_titles_cast" />
@@ -1747,12 +1747,12 @@
       DTS:From="Package\Truncate netflix_titles_cast"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 6"
-      DTS:To="Package\Insert netflix_titles_cast" />
+      DTS:To="Package\Transfer netflix_titles_cast Excel" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
       DTS:CreationName=""
       DTS:DTSID="{CAF6C877-B591-474C-8CDE-E604AE06E786}"
-      DTS:From="Package\Insert netflix_titles_cast"
+      DTS:From="Package\Transfer netflix_titles_cast Excel"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 7"
       DTS:To="Package\Truncate netflix_titles_category" />
@@ -1763,7 +1763,7 @@
       DTS:From="Package\Truncate netflix_titles_category"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 8"
-      DTS:To="Package\Insert netflix_titles_category" />
+      DTS:To="Package\Transfer netflix_titles_category Excel" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1778,9 +1778,25 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Insert netflix_titles"
+          Size="204.5,42"
+          Id="Package\Transfer netflix_titles Excel"
           TopLeft="505.5,82.8749995883554" />
+        <NodeLayout
+          Size="229.5,42"
+          Id="Package\Transfer netflix_titles_cast Excel"
+          TopLeft="504.5,395.541666728547" />
+        <NodeLayout
+          Size="250.5,42"
+          Id="Package\Transfer netflix_titles_category Excel"
+          TopLeft="505,491.958332916307" />
+        <NodeLayout
+          Size="253,42"
+          Id="Package\Transfer netflix_titles_countries Excel"
+          TopLeft="503,292.625000573073" />
+        <NodeLayout
+          Size="250.5,42"
+          Id="Package\Transfer netflix_titles_directors Excel"
+          TopLeft="502,184.999999903142" />
         <NodeLayout
           Size="178.5,42"
           Id="Package\Truncate netflix_titles"
@@ -1796,27 +1812,11 @@
         <NodeLayout
           Size="226.5,42"
           Id="Package\Truncate netflix_titles_countries"
-          TopLeft="149.5,290.49999906371" />
+          TopLeft="149.5,291.041665727686" />
         <NodeLayout
           Size="224.5,42"
           Id="Package\Truncate netflix_titles_directors"
           TopLeft="149,187.958332399734" />
-        <NodeLayout
-          Size="209,42"
-          Id="Package\Insert netflix_titles_directors"
-          TopLeft="502,184.999999903142" />
-        <NodeLayout
-          Size="211.5,42"
-          Id="Package\Insert netflix_titles_countries"
-          TopLeft="503,292.625000573073" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Insert netflix_titles_cast"
-          TopLeft="504.5,395.541666728547" />
-        <NodeLayout
-          Size="209,42"
-          Id="Package\Insert netflix_titles_category"
-          TopLeft="505,491.958332916307" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="330,104.958332916308">
@@ -1841,30 +1841,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="587,124.874999588355">
+          TopLeft="607.75,124.874999588355">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-325.75,63.0833328113784"
+              EndConnector="-346.5,63.0833328113786"
               Start="0,0"
-              End="-325.75,55.5833328113784">
+              End="-346.5,55.5833328113786">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.5416664056892" />
+                    End="0,27.5416664056893" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.5416664056892"
-                    Point2="0,31.5416664056892"
-                    Point3="-4,31.5416664056892" />
+                    Point1="0,27.5416664056893"
+                    Point2="0,31.5416664056893"
+                    Point3="-4,31.5416664056893" />
                   <mssgle:LineSegment
-                    End="-321.75,31.5416664056892" />
+                    End="-342.5,31.5416664056893" />
                   <mssgle:CubicBezierSegment
-                    Point1="-321.75,31.5416664056892"
-                    Point2="-325.75,31.5416664056892"
-                    Point3="-325.75,35.5416664056892" />
+                    Point1="-342.5,31.5416664056893"
+                    Point2="-346.5,31.5416664056893"
+                    Point3="-346.5,35.5416664056893" />
                   <mssgle:LineSegment
-                    End="-325.75,55.5833328113784" />
+                    End="-346.5,55.5833328113786" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1897,30 +1897,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="606.5,226.999999903142">
+          TopLeft="627.25,226.999999903142">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-343.75,63.4999991605675"
+              EndConnector="-364.5,64.041665824544"
               Start="0,0"
-              End="-343.75,55.9999991605675">
+              End="-364.5,56.541665824544">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.7499995802838" />
+                    End="0,28.020832912272" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.7499995802838"
-                    Point2="0,31.7499995802838"
-                    Point3="-4,31.7499995802838" />
+                    Point1="0,28.020832912272"
+                    Point2="0,32.020832912272"
+                    Point3="-4,32.020832912272" />
                   <mssgle:LineSegment
-                    End="-339.75,31.7499995802838" />
+                    End="-360.5,32.020832912272" />
                   <mssgle:CubicBezierSegment
-                    Point1="-339.75,31.7499995802838"
-                    Point2="-343.75,31.7499995802838"
-                    Point3="-343.75,35.7499995802838" />
+                    Point1="-360.5,32.020832912272"
+                    Point2="-364.5,32.020832912272"
+                    Point3="-364.5,36.020832912272" />
                   <mssgle:LineSegment
-                    End="-343.75,55.9999991605675" />
+                    End="-364.5,56.541665824544" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1931,7 +1931,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="376,312.562499818392">
+          TopLeft="376,312.83333315038">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1953,30 +1953,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="608.75,334.625000573073">
+          TopLeft="629.5,334.625000573073">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-357.5,58.4166651546128"
+              EndConnector="-378.25,58.416665154613"
               Start="0,0"
-              End="-357.5,50.9166651546128">
+              End="-378.25,50.916665154613">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.2083325773064" />
+                    End="0,25.2083325773065" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.2083325773064"
-                    Point2="0,29.2083325773064"
-                    Point3="-4,29.2083325773064" />
+                    Point1="0,25.2083325773065"
+                    Point2="0,29.2083325773065"
+                    Point3="-4,29.2083325773065" />
                   <mssgle:LineSegment
-                    End="-353.5,29.2083325773064" />
+                    End="-374.25,29.2083325773065" />
                   <mssgle:CubicBezierSegment
-                    Point1="-353.5,29.2083325773064"
-                    Point2="-357.5,29.2083325773064"
-                    Point3="-357.5,33.2083325773064" />
+                    Point1="-374.25,29.2083325773065"
+                    Point2="-378.25,29.2083325773065"
+                    Point3="-378.25,33.2083325773065" />
                   <mssgle:LineSegment
-                    End="-357.5,50.9166651546128" />
+                    End="-378.25,50.916665154613" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1987,7 +1987,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="353,415.291666228117">
+          TopLeft="353,415.291666228116">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2009,30 +2009,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="598.5,437.541666728547">
+          TopLeft="619.25,437.541666728547">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-338.25,56.4166656711863"
+              EndConnector="-359,56.416665671187"
               Start="0,0"
-              End="-338.25,48.9166656711863">
+              End="-359,48.916665671187">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.2083328355932" />
+                    End="0,24.2083328355935" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.2083328355932"
-                    Point2="0,28.2083328355932"
-                    Point3="-4,28.2083328355932" />
+                    Point1="0,24.2083328355935"
+                    Point2="0,28.2083328355935"
+                    Point3="-4,28.2083328355935" />
                   <mssgle:LineSegment
-                    End="-334.25,28.2083328355932" />
+                    End="-355,28.2083328355935" />
                   <mssgle:CubicBezierSegment
-                    Point1="-334.25,28.2083328355932"
-                    Point2="-338.25,28.2083328355932"
-                    Point3="-338.25,32.2083328355932" />
+                    Point1="-355,28.2083328355935"
+                    Point2="-359,28.2083328355935"
+                    Point3="-359,32.2083328355935" />
                   <mssgle:LineSegment
-                    End="-338.25,48.9166656711863" />
+                    End="-359,48.916665671187" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2067,20 +2067,20 @@
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Insert netflix_titles">
+    design-time-name="Package\Transfer netflix_titles Excel">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="134,42"
-          Id="Package\Insert netflix_titles\netflix_titles"
+          Id="Package\Transfer netflix_titles Excel\netflix_titles"
           TopLeft="277.5,50.9166664137609" />
         <NodeLayout
           Size="173,42"
-          Id="Package\Insert netflix_titles\OLE DB Destination"
+          Id="Package\Transfer netflix_titles Excel\OLE DB Destination"
           TopLeft="252.5,161.416665864901" />
         <EdgeLayout
-          Id="Package\Insert netflix_titles.Paths[Excel Source Output]"
+          Id="Package\Transfer netflix_titles Excel.Paths[Excel Source Output]"
           TopLeft="341.75,92.9166664137609">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2105,7 +2105,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Insert netflix_titles\netflix_titles">
+    design-time-name="Package\Transfer netflix_titles Excel\netflix_titles">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2118,7 +2118,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Insert netflix_titles\OLE DB Destination">
+    design-time-name="Package\Transfer netflix_titles Excel\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2131,148 +2131,20 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Insert netflix_titles_directors">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="186,42"
-          Id="Package\Insert netflix_titles_directors\netflix_titles_direcetors"
-          TopLeft="252.7,54.1166664137609" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Insert netflix_titles_directors\OLE DB Destination"
-          TopLeft="252.5,161.416665864901" />
-        <EdgeLayout
-          Id="Package\Insert netflix_titles_directors.Paths[Excel Source Output]"
-          TopLeft="342.35,96.1166664137609">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,65.2999994511401"
-              Start="0,0"
-              End="0,57.7999994511401">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,57.7999994511401" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Insert netflix_titles_directors\netflix_titles_direcetors">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Insert netflix_titles_directors\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Insert netflix_titles_countries">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="182.5,42"
-          Id="Package\Insert netflix_titles_countries\netflix_titles_countries"
-          TopLeft="255.5,55.9166664137609" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Insert netflix_titles_countries\OLE DB Destination"
-          TopLeft="252.5,161.416665864901" />
-        <EdgeLayout
-          Id="Package\Insert netflix_titles_countries.Paths[Excel Source Output]"
-          TopLeft="342.875,97.9166664137609">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63.4999994511401"
-              Start="0,0"
-              End="0,55.9999994511401">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.9999994511401" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Insert netflix_titles_countries\netflix_titles_countries">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Insert netflix_titles_countries\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Insert netflix_titles_cast">
+    design-time-name="Package\Transfer netflix_titles_cast Excel">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="159,42"
-          Id="Package\Insert netflix_titles_cast\netflix_titles_cast"
+          Id="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast"
           TopLeft="277.5,50.9166664137609" />
         <NodeLayout
           Size="173,42"
-          Id="Package\Insert netflix_titles_cast\OLE DB Destination"
+          Id="Package\Transfer netflix_titles_cast Excel\OLE DB Destination"
           TopLeft="252.5,161.416665864901" />
         <EdgeLayout
-          Id="Package\Insert netflix_titles_cast.Paths[Excel Source Output]"
+          Id="Package\Transfer netflix_titles_cast Excel.Paths[Excel Source Output]"
           TopLeft="357,92.9166664137609">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2309,7 +2181,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Insert netflix_titles_cast\netflix_titles_cast">
+    design-time-name="Package\Transfer netflix_titles_cast Excel\netflix_titles_cast">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2322,7 +2194,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Insert netflix_titles_cast\OLE DB Destination">
+    design-time-name="Package\Transfer netflix_titles_cast Excel\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2335,20 +2207,20 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Insert netflix_titles_category">
+    design-time-name="Package\Transfer netflix_titles_category Excel">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="180,42"
-          Id="Package\Insert netflix_titles_category\netflix_titles_category"
+          Id="Package\Transfer netflix_titles_category Excel\netflix_titles_category"
           TopLeft="249.5,53.9166664137609" />
         <NodeLayout
           Size="173,42"
-          Id="Package\Insert netflix_titles_category\OLE DB Destination"
+          Id="Package\Transfer netflix_titles_category Excel\OLE DB Destination"
           TopLeft="252.5,161.416665864901" />
         <EdgeLayout
-          Id="Package\Insert netflix_titles_category.Paths[Excel Source Output]"
+          Id="Package\Transfer netflix_titles_category Excel.Paths[Excel Source Output]"
           TopLeft="339.25,95.9166664137609">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2373,7 +2245,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Insert netflix_titles_category\netflix_titles_category">
+    design-time-name="Package\Transfer netflix_titles_category Excel\netflix_titles_category">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2386,7 +2258,135 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Insert netflix_titles_category\OLE DB Destination">
+    design-time-name="Package\Transfer netflix_titles_category Excel\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Transfer netflix_titles_countries Excel">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="182.5,42"
+          Id="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries"
+          TopLeft="255.5,55.9166664137609" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Transfer netflix_titles_countries Excel\OLE DB Destination"
+          TopLeft="252.5,161.416665864901" />
+        <EdgeLayout
+          Id="Package\Transfer netflix_titles_countries Excel.Paths[Excel Source Output]"
+          TopLeft="342.875,97.9166664137609">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.4999994511401"
+              Start="0,0"
+              End="0,55.9999994511401">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.9999994511401" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transfer netflix_titles_countries Excel\netflix_titles_countries">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transfer netflix_titles_countries Excel\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Transfer netflix_titles_directors Excel">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors"
+          TopLeft="252.7,54.1166664137609" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Transfer netflix_titles_directors Excel\OLE DB Destination"
+          TopLeft="252.5,161.416665864901" />
+        <EdgeLayout
+          Id="Package\Transfer netflix_titles_directors Excel.Paths[Excel Source Output]"
+          TopLeft="342.35,96.1166664137609">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65.2999994511401"
+              Start="0,0"
+              End="0,57.7999994511401">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.7999994511401" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transfer netflix_titles_directors Excel\netflix_titles_direcetors">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transfer netflix_titles_directors Excel\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

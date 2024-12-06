@@ -18,6 +18,7 @@ const SupportPage = () => {
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const usernameRegex = /^[a-zA-Z0-9]{3,20}$/;
+  const normalizeWhitespace = (str: string) => str.trim().replace(/\s+/g, ' ');
 
   const validateField = (name: string, value: string) => {
     let error = '';
@@ -34,14 +35,24 @@ const SupportPage = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setData({ ...data, [name]: value });
-    validateField(name, value);
+    const normalizedValue = normalizeWhitespace(value);
+    setData({ ...data, [name]: value});
+    validateField(name, normalizedValue);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const emailError = emailRegex.test(data.email) ? '' : 'Invalid email format.';
-    const username = data.firstName + data.lastName;
+    const trimmedData = {
+      ...data,
+      firstName: normalizeWhitespace(data.firstName),
+      lastName: normalizeWhitespace(data.lastName),
+      email: data.email.trim(),
+      topic: data.topic.trim(),
+      description: data.description.trim(),
+    };
+
+    const emailError = emailRegex.test(trimmedData.email) ? '' : 'Invalid email format.';
+    const username = trimmedData.firstName + trimmedData.lastName.replace(/\s+/g, '');
     const usernameError = usernameRegex.test(username)
       ? ''
       : 'Username must be 3-20 characters and alphanumeric only.';
@@ -52,7 +63,7 @@ const SupportPage = () => {
       return;
     }
 
-    console.log('Form submitted:', data);
+    console.log('Form submitted:', trimmedData);
     alert(`Form submitted successfully.`)
     const randomTicketNumber = Math.floor(Math.random() * 9000) + 1000;
     setTicketNo(randomTicketNumber);

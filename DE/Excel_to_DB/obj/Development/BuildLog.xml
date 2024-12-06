@@ -2,23 +2,18 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>Excel_to_DB</Name>
-    <LastWriteTime>2024-11-22T14:15:39.88399Z</LastWriteTime>
+    <LastWriteTime>2024-12-05T18:00:01.1247323Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Excel_To_DB.dtsx</Name>
-      <LastWriteTime>2024-11-22T06:50:41.2281606Z</LastWriteTime>
+      <LastWriteTime>2024-12-06T09:15:02.3012039Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>JoinDB.dtsx</Name>
-      <LastWriteTime>2024-11-22T11:25:04.401707Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>JoinDB 1.dtsx</Name>
-      <LastWriteTime>2024-11-22T15:11:01.2458726Z</LastWriteTime>
+      <LastWriteTime>2024-12-06T09:16:39.1371359Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

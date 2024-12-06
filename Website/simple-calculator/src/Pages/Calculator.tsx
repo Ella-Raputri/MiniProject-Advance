@@ -106,7 +106,7 @@ const Calculator: React.FC = () => {
         octal: 'Invalid'
       });      
     }
-    setShowModal(true);
+    setShowModal((prev) => !prev);
 
   }, [firstNumber, secondNumber, operator, showHistory]);
   
@@ -139,13 +139,16 @@ const Calculator: React.FC = () => {
       else if (event.key === 'h' || event.key === 'H') {
         toggleHistory(); 
       }
+      else if (event.key === 'i' || event.key === 'I') {
+        handleConvertClick(); 
+      }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleNumberClick, handleOperatorClick, calculate, deleteOne, clear]);
+  }, [handleNumberClick, handleOperatorClick, calculate, deleteOne, clear, handleConvertClick]);
 
   const displayText = secondNumber || (operator === '*' ? 'x' : operator) || firstNumber;
 
